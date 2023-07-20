@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+
+<form class="" action="/update/<%=curr_post._id%>" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Title</label>
+    <input type="text" class="form-control" name="post_title" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%=curr_post.title%>">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Post</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="post_body" required = "true" rows="8" cols="30" ><%=curr_post.content%></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Update!</button>
+</form>
+<%- include("partials/footer") %>
